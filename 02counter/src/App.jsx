@@ -9,23 +9,47 @@ function App() {
 
   // let counter = 0;
   const addValue = () =>{
-    if(counter === "First add counter"){
-      setCounter(counter = 0);
-    }
-    else{
-      setCounter(counter = counter + 1);
-    // console.log("value added", counter);
-    }
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)   this will increase only one as they update only same counter and make 
+    // one batch and repeat same task
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+
+    setCounter(function (prevCounter){
+     return prevCounter + 1;
+    })
+    setCounter((prevCounter) =>
+     prevCounter + 1)
+    
+    setCounter(function (prevCounter){ // setcounter gives call back function
+     return prevCounter + 1;
+    })
+    setCounter((prevCounter) =>{
+     return prevCounter + 1;
+    })
   }
   const removeValue = () =>{
-    if(counter === 0){
-      setCounter("First add counter");
-    }
-    else{
-      setCounter(counter = counter - 1)
-    }
+    setCounter(counter = counter - 1)
     // console.log("value removed", counter);
   }
+  // const addValue = () =>{
+  //   if(counter === "First add counter"){
+  //     setCounter(counter = 0);
+  //   }
+  //   else{
+  //     setCounter(counter = counter + 1);
+  //   // console.log("value added", counter);
+  //   }
+  // }
+  // const removeValue = () =>{
+  //   if(counter === 0){
+  //     setCounter("First add counter");
+  //   }
+  //   else{
+  //     setCounter(counter = counter - 1)
+  //   }
+  //   // console.log("value removed", counter);
+  // }
   return (
     <>
     <h1>Sachin</h1>

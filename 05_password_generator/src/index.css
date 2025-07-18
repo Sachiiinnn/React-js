@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+body{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    justify-content: center;
+    align-items: center ;
+}
+#container{
+    width: 500px;
+    background-color: gray;
+    height: 200px;
+
+}
+h1{
+    text-align: center;
+    font-size: xx-large;
+    margin : 10px 40px 10px 40px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+input[type="text"]{
+    background-color: white;
+    width: max-content;
+    padding: 10px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+}
+button{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between items */
+  margin : 20px 0px 20px 0px;
+}
+
+#numberInput, #charInput {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 8px;
+  width: 100px;
+}
+#range{
+    width: 90px;
+    margin-left: 10px;
+}
+label{
+    font-size: large;
+    font-weight: 500;
+}
